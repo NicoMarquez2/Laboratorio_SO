@@ -8,7 +8,14 @@
 #include <sys/shm.h>
 #include <sys/stat.h>
 #include <sys/mman.h>
+#include <list>
+#include <string>
+#include <iostream>
+
+using namespace std;
+
 int main() {
+    list<string> buffer;
 	int p;
     char line[256];
     char scripts[20][256];
@@ -34,6 +41,8 @@ int main() {
         if (strncmp(line, "//", 2) == 0) {
             // Si ya había un archivo abierto, cerrarlo
             if (s != NULL) {
+                string name = "script" + to_string(script_count) + ".sh";
+                buffer.push_back(name);
                 fclose(s);
             }
             // Incrementar el contador de scripts
@@ -62,7 +71,10 @@ int main() {
     fclose(f);
     printf("Archivos de script generados correctamente.\n");
 
+    for (std::list<string>::iterator it = buffer.begin(); it != buffer.end(); ++it) {
+        std::cout << *it << " ";
 
+    }
     //Consumidor comienza
     
     return 0;
