@@ -1,0 +1,24 @@
+[Consumidor] Ejecutando el script: //----------------------------------------
+[Consumidor] Ejecutando el script: cd /etc
+[Consumidor] Ejecutando el script: cat passwd
+[Consumidor] Ejecutando el script: //----------------------------------------
+[Consumidor] Ejecutando el script: wc -l /etc/passwd
+[Consumidor] Ejecutando el script: //----------------------------------------
+[Consumidor] Ejecutando el script: ls -ltr | grep "^d"
+[Consumidor] Ejecutando el script: //----------------------------------------
+[Consumidor] Ejecutando el script: clear
+[Consumidor] Ejecutando el script: ps aux
+[Consumidor] Ejecutando el script: //----------------------------------------
+[Consumidor] Ejecutando el script: df -k
+[Consumidor] Ejecutando el script: ls
+[Consumidor] Ejecutando el script: //----------------------------------------
+[Consumidor] Ejecutando el script: echo "Vamo arriba el manya!!!"
+[Consumidor] Ejecutando el script: //----------------------------------------
+[Consumidor] Ejecutando el script: cd /usr/local
+[Consumidor] Ejecutando el script: ls *bin
+[Consumidor] Ejecutando el script: //----------------------------------------
+[Consumidor] Ejecutando el script: cd /dev
+[Consumidor] Ejecutando el script: ls -ltr /sd*
+[Consumidor] Ejecutando el script: //----------------------------------------
+[Consumidor] Ejecutando el script: cut -f1 -d: /etc/passwd
+[Consumidor] El productor ha finalizado. No hay más scripts para ejecutar.
