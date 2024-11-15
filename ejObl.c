@@ -18,7 +18,7 @@ int main() {
     char execute[64];
     int script_count = 0;
 
-    const int SIZE = 50;
+    const int SIZE = 64;
     int shm_fd;
     char *ptr;
 
@@ -33,7 +33,7 @@ int main() {
     ptr = (char*) mmap(0, SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, shm_fd, 0);
 
     // Abrir archivo de scripts
-    FILE *f = fopen("/home/nico/Documentos/Laboratorio_SO/scripts.txt", "r");
+    FILE *f = fopen("/home/tecnoinf/Desktop/SO_BV/Laboratorio_SO/scripts.txt", "r");
     if (f == NULL) {
         perror("Error al abrir el archivo de entrada");
         return 1;
@@ -65,8 +65,8 @@ int main() {
                 }
 
                 script_count++;
-                snprintf(script_name, sizeof(script_name), "/home/nico/Documentos/Laboratorio_SO/script%d.sh", script_count);
-                
+                snprintf(script_name, sizeof(script_name), "/home/tecnoinf/Desktop/SO_BV/Laboratorio_SO/script%d.sh", script_count);
+                printf("ARCHIVO: %s", script_name);
                 // Abrir un nuevo archivo para escribir el script
                 s = fopen(script_name, "w");
                 if (s == NULL) {
